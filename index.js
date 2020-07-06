@@ -10,3 +10,9 @@ function fuzzyMatch(dr, st){
     return drName.slice(0, name) === st
   })
 }
+function matchName(dr, st){
+  return dr.filter(function(driver) {
+    return driver.name.toLowerCase() === st.toLowerCase()
+    
+  })
+}
