@@ -4,3 +4,9 @@ function findMatching(dr,st){
     return driverName.toLowerCase()=== st.toLowerCase()
   })
 }
+function fuzzyMatch(dr, st){
+  let name = st.length
+  return dr.filter(function (drName) {
+    return drName.slice(0, name) === st
+  })
+}
